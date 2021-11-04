@@ -23,7 +23,7 @@ export default function useLogin() {
     return user.password.length >= 6 && user.email
   }
 
-  const login = () => {
+  const login = () => {    
     if (validate(user)) {
       auth
         .login(user)

@@ -10,7 +10,7 @@ const reset = useResetStore()
 
 const login = async (user: UserToLogin) => {
   return await api.post<UserResponseWithJWT>('users/auth', user).then((response) => {
-    auth.isAuthenticated.value = true
+    auth.isAuthenticated.value = true 
     setMyProfile(response.data.user)
     return response
   })
